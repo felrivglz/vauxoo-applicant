@@ -1,16 +1,28 @@
 """
-Your module documentation here
+The module calcultor contain a class (calculator_class)
+for the evaluation of intern vauxoo aplication
 """
 
 
-class CalculatorClass(object):
+class calculator_class(object):
     """
-    Your class documentation here
+    This class contains one method called sum, this method
+    requires a list number for working
     """
-
     def sum(self, num_list):
         """
-        Your method documentation here
+        The sum method get a list of  numbers and sum all
+        its values, returned integer number with the sum
         """
-        # your sum code here
-        return "not implement yet"  # Remove this dummy line
+        resultado = 0
+        x = len(num_list)
+        for n in num_list:
+            resultado += n
+        return resultado
+
+"""
+for check uncomment the next lines:
+listaa = [1, 3, 4, 5, 6, 7, 8, 9]
+x = calculator_class()
+print x.sum(listaa)
+"""
