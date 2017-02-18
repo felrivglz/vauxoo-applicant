@@ -60,10 +60,3 @@ VALUES ( 'Sergio', 'Rivera', 2) ;
 
 INSERT INTO employee (first_name, last_name, departament_id)
 VALUES ( 'Jorge', 'Rivera', 4) ;
-
-
---CREATE TABLE employee_hobby (
-
---);
-
--- ...
