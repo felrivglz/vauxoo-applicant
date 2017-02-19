@@ -65,3 +65,30 @@ INSERT INTO employee (first_name, last_name, departament_id)
     VALUES ( 'Sergio', 'Rivera', 2);
 INSERT INTO employee (first_name, last_name, departament_id)
     VALUES ( 'Jorge', 'Rivera', 2);
+
+-- In the part 2, create a table, add datos and add column in tabla employee
+CREATE TABLE employee_hobby (
+    id serial NOT NULL,
+    name VARCHAR(15) NOT NULL,
+    description  TEXT,
+    PRIMARY KEY (id),
+    UNIQUE (id, name)
+);
+
+--add 4 hobys in the table employee_hobby
+INSERT INTO employee_hobby (name, description)
+  VALUES ( 'Run', 'run 5k or run 10k');
+INSERT INTO employee_hobby (name, description)
+  VALUES ( 'Bike', 'bike 50k or bike 100k');
+INSERT INTO employee_hobby (name, description)
+  VALUES ( 'Dance', 'Dance 1/2h or Dance 1h');
+--add column for hobbys in table employee type array
+ALTER TABLE employee
+    ADD COLUMN hobbys INT[];
+--insert data in column hobbys 
+UPDATE employee
+    SET hobbys = '{ 1, 2 }'
+    WHERE id < 3;
+UPDATE employee
+    SET hobbys = '{ 3, 2, 1 }'
+    WHERE id > 2;
