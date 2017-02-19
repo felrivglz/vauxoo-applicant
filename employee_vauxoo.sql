@@ -92,3 +92,23 @@ UPDATE employee
 UPDATE employee
     SET hobbys = '{ 3, 2, 1 }'
     WHERE id > 2;
+
+--PARTE 3. delete and create column with diferent type.
+ALTER TABLE employee
+    DROP COLUMN departament_id;
+ALTER TABLE employee
+    ADD COLUMN iddepartament_and_idboss INT[2];
+-- insert data in the new column in employee
+UPDATE employee
+    SET iddepartament_and_idboss = '{ 5, NULL }'
+    WHERE id = 1;
+UPDATE employee
+    SET iddepartament_and_idboss = '{ 1, 1 }'
+    WHERE id = 2;
+UPDATE employee
+    SET iddepartament_and_idboss = '{ 2, 1 }'
+    WHERE id = 3;
+UPDATE employee
+    SET iddepartament_and_idboss = '{ 2, 3 }'
+    WHERE id = 4;
+
