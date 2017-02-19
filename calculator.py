@@ -18,5 +18,3 @@ class CalculatorClass(object):
         for numero in num_list:
             resultado += numero
         return resultado
-
-
