@@ -8,11 +8,8 @@
 --       You can create database locally to test it.
 --       Consider add ';' at end sentence.
 --start sql1 part
-
 -- CHECK IF THE TABLES EXISTS, IF TABLES EXITE DELET
-DROP TABLE IF EXISTS employee_whit_hobbys;
 DROP TABLE IF EXISTS employee_hobby;
-DROP TABLE IF EXISTS boss_employees;
 DROP TABLE IF EXISTS employee CASCADE;
 DROP TABLE IF EXISTS employee_department;
 
@@ -85,7 +82,7 @@ INSERT INTO employee_hobby (name, description)
 --add column for hobbys in table employee type array
 ALTER TABLE employee
     ADD COLUMN hobbys INT[];
---insert data in column hobbys 
+--insert data in column hobbys
 UPDATE employee
     SET hobbys = '{ 1, 2 }'
     WHERE id < 3;
@@ -111,4 +108,3 @@ UPDATE employee
 UPDATE employee
     SET iddepartament_and_idboss = '{ 2, 3 }'
     WHERE id = 4;
-
